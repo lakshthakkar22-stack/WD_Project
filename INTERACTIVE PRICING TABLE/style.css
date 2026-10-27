@@ -1,0 +1,37 @@
+* { box-sizing: border-box; }
+body { margin: 0; padding: 24px 16px; background: #f4f6f5; color: #202824; font-family: Arial, sans-serif; }
+.page-shell { width: min(100%, 980px); margin: 0 auto; padding: 24px; border: 1px solid #dce3df; border-radius: 6px; background: #fff; }
+h1 { margin: 0; font-size: 26px; line-height: 1.3; text-align: center; }
+.intro { margin: 8px 0 20px; color: #526159; font-size: 14px; line-height: 1.5; text-align: center; }
+.controls { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 20px 36px; margin-bottom: 24px; }
+.toggle { display: inline-flex; padding: 4px; border-radius: 6px; background: #edf2ef; }
+.toggle-button { min-height: 38px; padding: 0 16px; border: 0; border-radius: 4px; background: transparent; color: #202824; font: inherit; font-weight: 600; cursor: pointer; }
+.toggle-button.active { background: #267247; color: #fff; }
+.badge { margin-left: 4px; padding: 2px 6px; border-radius: 10px; background: #d4e9dc; color: #176b3a; font-size: 11px; }
+.toggle-button.active .badge { background: #fff; }
+.seats { width: min(100%, 280px); font-size: 14px; }
+.seats label { display: block; margin-bottom: 6px; font-weight: 600; }
+.seats input { width: 100%; accent-color: #267247; }
+.plans { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; }
+.plan { display: flex; flex-direction: column; padding: 20px; border: 1px solid #dce3df; border-radius: 6px; background: #fff; transition: transform 0.15s, box-shadow 0.15s; }
+.plan:hover { transform: translateY(-3px); box-shadow: 0 6px 16px rgba(32, 40, 36, 0.12); }
+.plan.popular { border: 2px solid #267247; }
+.plan.selected { background: #f1f6f3; border-color: #176b3a; }
+.plan h2 { margin: 0 0 4px; font-size: 20px; }
+.plan .tag { margin: 0 0 12px; color: #526159; font-size: 13px; min-height: 18px; }
+.price { margin: 0; font-size: 34px; font-weight: 700; }
+.price small { font-size: 14px; font-weight: 400; color: #526159; }
+.total { margin: 4px 0 14px; color: #526159; font-size: 13px; }
+.plan ul { flex: 1; margin: 0 0 16px; padding-left: 18px; font-size: 14px; line-height: 1.7; }
+.button { width: 100%; min-height: 42px; border: 0; border-radius: 4px; background: #267247; color: #fff; font: inherit; font-weight: 600; cursor: pointer; }
+.button:hover { background: #1d5c39; }
+.plan.selected .button { background: #176b3a; }
+.summary { margin: 18px 0 0; padding: 12px 14px; border-radius: 4px; background: #f1f6f3; color: #176b3a; font-size: 14px; line-height: 1.5; }
+.link-button { display: block; margin: 18px auto 0; padding: 6px 10px; border: 0; background: none; color: #176b3a; font: inherit; font-size: 14px; text-decoration: underline; cursor: pointer; }
+.compare { margin-top: 12px; overflow-x: auto; }
+.compare table { width: 100%; border-collapse: collapse; font-size: 14px; }
+.compare th, .compare td { padding: 9px 10px; border-bottom: 1px solid #dce3df; text-align: center; }
+.compare th:first-child, .compare td:first-child { text-align: left; }
+.compare thead th { background: #f1f6f3; }
+button:focus-visible, input:focus-visible { outline: 3px solid #9bc9ab; outline-offset: 2px; }
+@media (max-width: 480px) { .page-shell { padding: 16px; } .price { font-size: 30px; } }
