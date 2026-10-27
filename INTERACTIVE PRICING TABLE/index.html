@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+ <meta charset="utf-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1">
+ <title>Interactive Pricing Table</title>
+ <link rel="stylesheet" href="css/style.css">
+ <script src="js/script.js" defer></script>
+</head>
+<body>
+ <main class="page-shell">
+ <h1>Choose your plan</h1>
+ <p class="intro">Pick a billing period and the number of users to see the price.</p>
+ <div class="controls">
+ <div class="toggle" role="group" aria-label="Billing period">
+ <button class="toggle-button active" id="monthly-button" type="button" aria-pressed="true">Monthly</button>
+ <button class="toggle-button" id="yearly-button" type="button" aria-pressed="false">Yearly <span class="badge">Save 20%</span></button>
+ </div>
+ <div class="seats">
+ <label for="user-count">Number of users: <strong id="user-count-value">5</strong></label>
+ <input id="user-count" type="range" min="1" max="100" step="1" value="5">
+ </div>
+ </div>
+ <section id="plans" class="plans" aria-label="Pricing plans"></section>
+ <p id="summary" class="summary" role="status" aria-live="polite" hidden></p>
+ <button class="link-button" id="compare-toggle" type="button" aria-expanded="false">Show feature comparison</button>
+ <div id="compare" class="compare" hidden>
+ <table id="compare-table"></table>
+ </div>
+ </main>
+</body>
+</html>
